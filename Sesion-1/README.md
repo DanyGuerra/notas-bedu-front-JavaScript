@@ -1,3 +1,5 @@
+[`Menú principal`](../)
+
 # Sesión 1: Fundamentos de JS
 
 ##
