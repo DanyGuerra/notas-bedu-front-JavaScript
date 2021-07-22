@@ -1,4 +1,4 @@
-// Reto 1
+// Reto 1 Potencia de un numero
 function power(base, exponent){
   let acumulado = 1;
   for(let i=0;i<exponent;i++){
@@ -7,4 +7,4 @@ function power(base, exponent){
   return acumulado;
 }
 
-console.log(power(3,3));
+console.log(power(5,2));

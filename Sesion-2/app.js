@@ -42,20 +42,20 @@
 // }
 
 // Reto 3 Imprimiento numero primos
-console.time('Prueba')
-for (let num = 1; num <= 1000; num++) {
-  let vecesDivisible = 0;
-  for(let j = 1; j <= num; j++){
-    if ( num % j == 0){
-      vecesDivisible++;
-    }
-  }
-  if (vecesDivisible == 2) {
-    console.log(num)
-  }
-  vecesDivisible = 0;
-}
-console.timeEnd('Prueba')
+// console.time('Prueba')
+// for (let num = 1; num <= 1000; num++) {
+//   let vecesDivisible = 0;
+//   for(let j = 1; j <= num; j++){
+//     if ( num % j == 0){
+//       vecesDivisible++;
+//     }
+//   }
+//   if (vecesDivisible == 2) {
+//     console.log(num)
+//   }
+//   vecesDivisible = 0;
+// }
+// console.timeEnd('Prueba')
 
 // Reto 3 VERSION2 Imprimiento numero primos
 // console.time('Prueba')
@@ -75,3 +75,24 @@ console.timeEnd('Prueba')
 //   vecesDivisible = 0;
 // }
 // console.timeEnd('Prueba')
+
+
+
+
+//Funciones de cada uno de los retos
+
+function saludar(hora){
+  time = hora;
+  let greeting
+  if (time < 12) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good afternoon";
+  } else if (time >= 20 && time <= 24) {
+    greeting = "Good evening";
+  } else if (time > 24) {
+    greeting = "Hora invalida";
+  }
+  return greeting
+}
+console.log('Funcion saludar:',saludar(10))
