@@ -17,3 +17,20 @@ function getLargerInt(number1, number2) {
   }
 }
 console.log('Funcion de numero mayor: ', getLargerInt(52, 22));
+
+//Reto 3 Serie de Fibonacci
+function fibonacci(limit){
+  let serFibonacci = [];
+  if (limit < 1){
+    return console.log('Limite debe ser mayor a 0')
+  }
+  for(let i = 0; i < limit; i++){
+    if(i<=1){
+      serFibonacci.push(1);
+    }else{
+      serFibonacci.push(serFibonacci[i - 1] + serFibonacci[i - 2])
+    }
+  }
+  return serFibonacci;
+}
+console.log('Serie de fibonacci: ', fibonacci(15));
