@@ -4,21 +4,21 @@
 
  - [Sesión 1: Fundamentos de JS](./Sesion-1)
 
- - [Sesión 2: Controles de flujo](./Sesion-02)
+ - [Sesión 2: Controles de flujo](./Sesion-2)
 
- - [Sesión 3: Objetos y arreglos](./Sesion-03)
+ - [Sesión 3: Objetos y arreglos](./Sesion-3)
 
- - [Sesión 4: Funciones](./Sesion-04)
+ - [Sesión 4: Funciones](./Sesion-4)
 
- - [Sesión 5: Scope y this](./Sesion-05)
+ - [Sesión 5: Scope y this](./Sesion-5)
 
- - [Sesión 6: Programación orientada a objetos](./Sesion-06)
+ - [Sesión 6: Programación orientada a objetos](./Sesion-6)
 
- - [Sesión 7: Programación funcional](./Sesion-07)
+ - [Sesión 7: Programación funcional](./Sesion-7)
 
- - [Sesión 8: Webpack y Babel](./Sesion-08)
+ - [Sesión 8: Webpack y Babel](./Sesion-8)
 
- - [Sesión 9: Manipulación del DOM](./Sesion-09)
+ - [Sesión 9: Manipulación del DOM](./Sesion-9)
 
  - [Sesión 10: Eventos en el DOM](./Sesion-10)
 
