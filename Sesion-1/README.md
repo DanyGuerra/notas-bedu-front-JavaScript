@@ -98,3 +98,61 @@ name = 'Jane Doe';
 email = 'jane@doe.com'; // TypeError: Assignment to constant variable.
 
 ```
+
+## Tipos de datos
+
+JavaScript es un lenguaje de tipado débil, significa que no es necesario declarar el tipo de variable antes de usarla. El tipo de dato es determinado automáticamente cuando el programa esté siendo procesado.
+
+JavaScript cuenta con seis tipos de datos que pueden ser divididos en tres categorías:
+
+### Primitivos
+
+#### 1. String
+Este tipo de dato es utilizado para almacenar cadenas de texto. Los strings son creados con comillas dobles o sencillas alrededor de uno o más caracteres.
+
+```javascript
+var a = 'Hello World!';	// Comillas sencillas
+var b = "Hello World!";	// Comillas dobles
+```
+Las comillas también pueden formar parte de la cadena de texto siempre y cuando no coincidan con las comillas que abren y cierran el string.
+
+```javascript
+var a = "Let's learn JavaScript.";	// Comilla sencilla dentro de comillas dobles
+var b = 'He said "Hello" and left.';	// Comillas dobles dentro de comillas sencillas
+var c = 'We\'ll never stop learning.';	// Escapando comilla sencilla con backslash
+```
+
+Si queremos agregar el valor de una variable a una cadena de texto debemos concatenar ambos con el signo + y siempre tener cuidado de agregar espacios en blanco para que no salgan ambos textos juntos.
+
+```javascript
+const name = 'John Doe';
+
+console.log("Welcome " + name); // Welcome John Doe
+
+```
+
+Una alternativa a esta concatenación es el uso de _template strings_ que son cadenas de texto que permiten la interpolación mediante expresiones. Para esto se utiliza _backticks_.
+
+```javascript
+const name = 'John Doe';
+
+console.log(`Welcome ${ name }`); // Welcome John Doe
+
+```
+
+
+#### 2. Number
+
+
+
+
+#### 3. Boolean
+
+### Compuestos
+- Objetos
+- Array
+- Function
+
+### Especiales
+- Undefined
+- Null
