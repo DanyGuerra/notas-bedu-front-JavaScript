@@ -53,6 +53,48 @@ Las variables se dividen en 4 partes:
 
 Ejemplo:
 
-```
+```javascript
 var name = "John Doe";
+```
+
+### Convención de nombres
+Si se generá una variable que implica el uso de dos palabras es necesario usar una convención, podemos usar:
+
+- Camel case: `nombreDeLaVariable`
+
+- Snake case: `nombre_de_la_variable`
+
+### `let` y `const`
+
+[Documentación `let`](https://www.w3schools.com/js/js_let.asp)
+
+[Documentación `var`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/var)
+
+En JavaScript todas las variables son inicializadas con undefined al momento de su creación.
+
+
+- Si se trata de acceder a una variable con `let` antes de ser declarada obtenemos un `ReferenceError` en lugar de `undefined`.
+
+```javascript
+console.log(name); // undefined
+var name = "John Doe";
+```
+
+-  `let` te permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque.
+
+- Las variables definidas con `let` no se pueden volver a declarar.
+
+- Las variables definidas con `let` deben declararse antes de su uso.
+
+- Las variables definidas con `let` tienen alcance de bloque.
+
+- `const` es muy similar a `let`, la única diferencia es que una vez asignado un valor a una variable ya no se puede reasignar.
+
+```javascript
+let name = 'John Doe';
+const email = 'john@doe.com';
+
+name = 'Jane Doe';
+email = 'jane@doe.com'; // TypeError: Assignment to constant variable.
+
 ```
