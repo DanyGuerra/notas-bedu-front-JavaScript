@@ -172,6 +172,15 @@ console.log(Math.sqrt(-1)); // NaN
 NaN===NaN; //Esta expresión devuelve false
 ```
 #### 3. Boolean
+Las variables que contengan este tipo de dato sólo pueden almacenar uno de dos valores: `true` o `false`. Una este tipo de dato representa encendido (`true`) o apagado (`false`).
+
+```javascript
+var isUserActive = true;  // Sí, el usuario se encuentra activo
+var isUserAdmin = false;  // No, el usuario no es admin
+
+var luces = true //Las luces estan encendidas
+var luces = false //Las luces estan apagadas
+```
 
 ### Compuestos
 #### 1. Objetos
@@ -181,13 +190,97 @@ NaN===NaN; //Esta expresión devuelve false
 
 ### Especiales
 #### 1. Undefined
+Cuando una variable es declarada, pero no se le ha asignado un valor, por default su valor es undefined.
+
+```javascript
+var a;
+var b = 'Hello World';
+
+console.log(a);	// undefined
+console.log(b);	// Hello World
+
+```
+
 #### 2. Null
 
-## Operador `typeof`
+Cuando encontremos `null` significa que no hay valor. No es lo mismo que cero o `undefined`, simplemente es `null` o nada.
 
+```javascript
+var a = 'Hello World';
+console.log(a);	// Hello World
+
+a = null
+console.log(a);	// null
+
+```
+
+## Operador `typeof`
+El operador typeof es utilizado para averiguar qué tipo de dato contiene una variable. Puede ser usado con o sin paréntesis (typeof(a) o typeof a).
+
+```javascript
+var a = 5;
+var b = 'false';
+var c = true;
+var d;
+
+console.log(typeof a) //number
+console.log(typeof b) //string
+console.log(typeof c) //boolen
+console.log(typeof d) //undefined
+```
 
 
 ## Type coercion
+
+La coerción de datos o type coercion es el proceso de convertir un valor de un tipo de dato a otro, por ejemplo, string a number, boolean a string, etc. Dicho proceso se puede dar de manera tanto explícita como implícita.
+
+### Manera expícita
+
+La forma explícita es cuando se quiere hacer de manera intencional usando las funciones adecuadas como String(value) o Number(value), a esto también se le conoce como type casting.
+En JavaScript existen tres tipos de conversiones posibles.
+
+ - String
+ - Number
+ - Boolean
+
+ ```javascript
+String(123);  // '123'
+String(3.14); // '3.14'
+String(true); // 'true'
+String(false);  // 'false'
+String(undefined);  // 'undefined'
+String(null); // 'null'
+
+Number(' 10 '); // 10
+Number('-10');  // -10
+Number('123abc'); // NaN
+Number(true); // 1
+Number(false);  // 0
+Number(null); // 0
+Number(undefined);  // NaN
+
+Boolean(1); // true
+Boolean(0); // false
+
+ ```
+### Manera implícita
+
+Esta manera de conversión de tipo de dato se da cuando no se utilizan las funciones de la manera explicita. Ejemplos:
+
+```javascript
+123 + ''; // "123"
+`${123}`; // "123"
+
++ '123';  // 123
+1 - '1';  // 0
+2 * '2';  // 4
+
+if(1) {  } // true
+!!2;  // Operador logico doble negacion: true
+2 || 'Hello World'; //Operador lógico: true
+```
+
+
 
 ## Operadores Básicos
 
