@@ -142,17 +142,53 @@ console.log(`Welcome ${ name }`); // Welcome John Doe
 
 
 #### 2. Number
+El tipo de dato Number se usa para representar números enteros positivos o negativos con o sin punto decimal, incluso se puede usar en números con notación científica.
 
 
+```javascript
+var a = 12;	// Entero
+var b = 32.43;	// Decimal
+var c = 2.25e+6;  // Equivalente a 2.25x10^6 o 2250000
+var d = 2.25e-6;  // Equivalente a 2.25x10-6 o 0.00000225
 
+```
 
+Este tipo de dato incluye `Infinity`, `-Infinity` y `NaN`.
+
+`Infinity` represnenta el número matemático y `NaN` representa un valor no numérico, resultado de una operación matemática inválida.
+
+```javascript
+console.log(7 / 0); // Infinity
+console.log(-7 / 0);  // -Infinity
+console.log("Hello World" / 2);	// NaN
+console.log("Hello World" * 2);	// NaN
+console.log(Math.sqrt(-1)); // NaN
+
+```
+
+`Nota`: debido a que `NaN` puede provenir de una operación matemática inválida ya sea con una cadena de texto o con número, se tiene lo siguiente:
+
+```javascript
+NaN===NaN; //Esta expresión devuelve false
+```
 #### 3. Boolean
 
 ### Compuestos
-- Objetos
-- Array
-- Function
+#### 1. Objetos
+
+#### 2. Array
+#### 3. Function
 
 ### Especiales
-- Undefined
-- Null
+#### 1. Undefined
+#### 2. Null
+
+## Operador `typeof`
+
+
+
+## Type coercion
+
+## Operadores Básicos
+
+## Precedencia de Operadores
