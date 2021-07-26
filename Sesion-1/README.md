@@ -1,4 +1,4 @@
-[`Menú principal`](../)
+[`Menú principal`](../README.md)
 
 # Sesión 1: Fundamentos de JS
 ## Tabla de Contenidos
