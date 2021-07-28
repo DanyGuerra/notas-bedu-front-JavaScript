@@ -37,7 +37,7 @@ const person = {
 // Extrae el key de facebook y instagram
 // const {facebook, instagram} = person.links.social;
 
-// // Extrae el key de facebook y instagram; y lo reasigna a fb y ig
+// Extrae el key de facebook y instagram; y lo reasigna a fb y ig
 // const {facebook: fb, instagram: ig} = person.links.social;
 // console.log('Link Facebook: ',fb, 'Link Instagram: ' ,ig);
 
