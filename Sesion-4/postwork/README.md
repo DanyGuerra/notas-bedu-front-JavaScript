@@ -37,11 +37,43 @@ console.log('Test 5:', deepEqual(john, { firstName: 'John' })) // false
 
 
 # 2. Chunk
+La función chunk que recibe un arreglo y un número entero size. La función debe dividir el arreglo en múltiples arreglos del tamaño determinado por size.
 
+Ejemplo de chunk:
+
+```javascript
+ function chunk(array, size) {
+  // Code goes here
+};
+
+const data = [1, 2, 3, 4, 5, 6, 7, 8]
+
+console.log('Test 1:', chunk(data, 1)) // [[1], [2], [3], [4], [5], [6], [7], [8]]
+console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
+console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
+```
+
+## [Resultado de chunk](./chunk.js)
+
+<!-- Aqui va el resultado de la funcion -->
+
+```javascript
+//Funcion deepEqual()
+
+```
 
 
 # 3. Frequency
+La función frequency recibe un string como argumento. Esta función cuenta la frecuencia o el número de veces que se repite cada carácter.
 
+El resultado muestra en un objeto donde las propiedades son los caracteres, y los valores la frecuencia. Los resultados se ordenan de manera ascendente por los caracteres y no por la frecuencia.
 
+## [Resultado de frecuency](./frecuency.js)
 
+<!-- Aqui va el resultado de la funcion -->
+
+```javascript
+//Funcion frecuency()
+
+```
 
