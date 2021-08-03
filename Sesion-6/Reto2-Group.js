@@ -2,14 +2,14 @@ const Group = function() {
   this.members = [];
 }
 
-Group.prototype.add = function(value) {
-  if (!this.has(value)) {
-    this.members.push(value);
+Group.prototype.add = function(member) {
+  if (!this.has(member)) {
+    this.members.push(member);
   }
 }
 
-Group.prototype.has = function(value) {
-  return this.members.includes(value);
+Group.prototype.has = function(member) {
+  return this.members.includes(member);
 }
 
 Group.from = function(collection) {
@@ -27,4 +27,5 @@ console.log(group.has(5)); // true
 console.log(group.has(10)); // false
 
 group.add(10);
+console.log(group);
 console.log(group.has(10)); // true
