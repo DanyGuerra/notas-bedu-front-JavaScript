@@ -30,7 +30,7 @@ function filtroGrupoApro(array, group){
     });
 
     let promedio = aprobados.reduce((acc, current) => (acc + current.calif), 0) / aprobados.length;
-    aprobados.push({promedio:promedio, aprobados: aprobados.length});
+    aprobados.push({promedio: Number(promedio.toFixed(2)), aprobados: aprobados.length});
     return aprobados;
 }
 
@@ -41,6 +41,7 @@ let aprobadosC = filtroGrupoApro(estudiantes,'C');
 console.log('Alumnos aprobados del grupo A con promedio: ', aprobadosA);
 console.log('Alumnos aprobados del grupo B con promedio: ', aprobadosB);
 console.log('Alumnos aprobados del grupo C con promedio: ', aprobadosC);
+console.log('Estudiantes: ', estudiantes)
 
 //console.log(estudiantes);
 //return grupoA; // Estudiantes grupo A aprobados [ { nombre: 'Diego', calif: 8, grupo: 'A' }, ..., {Promedio: ** } ]
