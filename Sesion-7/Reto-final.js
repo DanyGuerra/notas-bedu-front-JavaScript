@@ -1,3 +1,11 @@
+/*El objetivo del reto es, retornar 3 arrays en 3 diferentes constantes,
+cada array contendrá los alumnos que son de su grupo (A, B o C) y
+únicamente los que fueron aprobados (Calificación mayor o igual a 6),
+al finalizar se debe de hacer un push a cada array con un objeto que
+contenga la propiedad promedio y se encuentre el promedio de los alumnos
+que aprobaron dependiendo de cada grupo.
+*/
+
 const estudiantes = [
     { nombre: 'Pedro', calif: 5, grupo: 'A' },
     { nombre: 'Pablo', calif: 8, grupo: 'B' },
@@ -15,6 +23,26 @@ const estudiantes = [
     { nombre: 'Ciro', calif: 7, grupo: 'C' }
 ];
 
-return grupoA; // Estudiantes grupo A aprobados [ { nombre: 'Diego', calif: 8, grupo: 'A' }, ..., {Promedio: ** } ]
-return grupoB; // Estudiantes grupo B aprobados [ { nombre: 'Pablo', calif: 8, grupo: 'B' }, ..., {Promedio: ** } ]
-return grupoC; // Estudiantes grupo C aprobados [ { nombre: 'Arturo', calif: 7, grupo: 'C' }, ..., {Promedio: ** } ]
+function filtroGrupoApro(array, group){
+    let aprobados = [];
+    aprobados = array.filter(element => {
+        return (element.grupo === group) && (element.calif >= 6)
+    });
+
+    let promedio = aprobados.reduce((acc, current) => (acc + current.calif), 0) / aprobados.length;
+    aprobados.push({promedio:promedio, aprobados: aprobados.length});
+    return aprobados;
+}
+
+let aprobadosA = filtroGrupoApro(estudiantes,'A');
+let aprobadosB = filtroGrupoApro(estudiantes,'B');
+let aprobadosC = filtroGrupoApro(estudiantes,'C');
+
+console.log('Alumnos aprobados del grupo A con promedio: ', aprobadosA);
+console.log('Alumnos aprobados del grupo B con promedio: ', aprobadosB);
+console.log('Alumnos aprobados del grupo C con promedio: ', aprobadosC);
+
+//console.log(estudiantes);
+//return grupoA; // Estudiantes grupo A aprobados [ { nombre: 'Diego', calif: 8, grupo: 'A' }, ..., {Promedio: ** } ]
+//return grupoB; // Estudiantes grupo B aprobados [ { nombre: 'Pablo', calif: 8, grupo: 'B' }, ..., {Promedio: ** } ]
+//return grupoC; // Estudiantes grupo C aprobados [ { nombre: 'Arturo', calif: 7, grupo: 'C' }, ..., {Promedio: ** } ]
