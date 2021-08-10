@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      height: 500px;
+      margin: 100px auto;
+      width: 500px;
+    }
+
+    .cell {
+      background-color: #2980b9;
+      background-size: contain;
+      border: 1px solid white;
+      box-sizing: border-box;
+      float: left;
+      height: 10%;
+      width: 10%;
+    }
+
+    .active {
+      background-color: #e67e22;
+    }
+
+    .active-head {
+      background-color: #e74c3c;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body>
+  <div class="container"></div>
+
+  <script>
+
+    //Board
+    const size = 10;
+
+    const makeBoard = size => {
+      let container = document.querySelector('.container');
+      for(let i=0; i<size; i++){
+        for(let j=0; j<size; j++){
+          let row = document.createElement('div');
+          let cell = document.createElement('div');
+          cell.className = `cell row-${i} col-${j}`;
+          container.appendChild(cell);
+        }
+      }
+    }
+
+    const makeSnake = () =>{
+      let numberRow = 0;
+      let numberColumn = 6;
+      let row = document.querySelectorAll(`.row-${numberRow}`);
+
+
+      row[numberColumn].classList.add("active-head");
+      row[numberColumn-1].classList.add("active");
+      row[numberColumn-2].classList.add("active");
+      row[numberColumn-3].classList.add("active");
+
+    }
+
+
+
+
+
+
+
+    let column = 0;
+
+    const snake = () =>{
+      const boardSize = 10;
+      const snakeSize = 4;
+      let numberRow = 1;
+      let row = document.querySelectorAll(`.row-${numberRow}`);
+
+      column++;
+
+      row[column].classList.add("active-head");
+      row[column-1].classList.remove("active-head");
+
+      if(column>=9){
+        row[column].classList.remove("active-head");
+        column = 0;
+      }
+
+
+
+    }
+
+    makeBoard(size);
+    makeSnake();
+    //setInterval(snake, 800)
+
+  </script>
+</body>
+
+</html>

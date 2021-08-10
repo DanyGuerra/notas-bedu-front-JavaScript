@@ -13,11 +13,9 @@
   <img src="https://picsum.photos/200/300" alt="Third Image" />
 
   <script>
-      // Code goes here
-      const images = document.body.getElementsByTagName("img");
+      const images = document.body.querySelectorAll("img");
 
-          for (let i = images.length - 1; i >= 0; i--) {
-        //debugger
+        for (let i = 0; i < images.length; i++) {
         const image = images[i];
         if (image.alt) {
           const text = document.createTextNode(image.alt);
