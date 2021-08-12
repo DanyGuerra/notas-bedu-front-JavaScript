@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto Final Calculadora</title>
+</head>
+<body>
+  <style>
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+    }
+    button{
+      border-radius: 5px;
+      width: 50px;
+      margin-top: 20px;
+      border-color: black;
+      color: black;
+      font-size: 30px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    button:hover{
+      background-color: black;
+      color: white;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .resultado p{
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30px;
+    }
+
+    #resultado{
+      color: white;
+      font-weight: 600;
+      background-color: black;
+      border-radius: 5px;
+    }
+
+    input{
+      border-radius: 20px;
+      height: 30px;
+
+    }
+
+    .title{
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+
+  </style>
+
+  <div class="wrapper">
+    <h1 class="title">
+    Calculadora
+    </h1>
+
+    <section id="calculadora">
+
+      <input class="number1" type="number" placeholder="Numero 1" required>
+      <input class="number2" type="number" placeholder="Numero 2" required>
+
+    </section>
+
+    <section>
+
+      <button class="mas-btn">+</button>
+      <button class="menos-btn">-</button>
+      <button class="mult-btn">*</button>
+      <button class="divi-btn">/</button>
+
+    </section>
+
+
+    <section class = "resultado">
+      <p>
+        El resultado es: <span id = "resultado">1</span>
+      </p>
+    </section>
+  </div>
+
+
+  <script>
+    let number1;
+    let number2;
+
+    const input1 = document.querySelector('.number1');
+    const input2 = document.querySelector('.number2');
+    let result = document.querySelector('#resultado');
+
+    const masBtn = document.querySelector('.mas-btn');
+    const menosBtn = document.querySelector('.menos-btn');
+    const multBtn = document.querySelector('.mult-btn');
+    const diviBtn = document.querySelector('.divi-btn');
+
+    input1.addEventListener("input", function (e) {number1 = Number(e.target.value)});
+    input2.addEventListener("input", function (e) {number2 = Number(e.target.value)});
+
+    masBtn.addEventListener('click', () => {sumar(number1, number2)});
+    menosBtn.addEventListener('click', () => {restar(number1, number2)});
+    multBtn.addEventListener('click', () => {multiplicar(number1, number2)});
+    diviBtn.addEventListener('click', () => {dividir(number1, number2)});
+
+
+    const sumar = (n1, n2) => {result.textContent = n1 + n2;}
+    const restar = (n1, n2) => {result.textContent = n1 - n2;}
+    const multiplicar = (n1, n2) => {result.textContent = n1 * n2;}
+    const dividir = (n1, n2) => {result.textContent = n1 / n2;}
+
+  </script>
+</body>
+</html>
