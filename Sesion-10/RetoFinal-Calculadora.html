@@ -21,8 +21,10 @@
       margin-top: 20px;
       border-color: black;
       color: black;
+      background-color:white;
       font-size: 30px;
       font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 
     }
 
@@ -46,8 +48,16 @@
 
     input{
       border-radius: 20px;
-      height: 30px;
+      height: 40px;
+      text-align: center;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      border: solid black 2px;
+    }
 
+    input:focus{
+      box-shadow: 2px 2px 2px black;
+      outline: none;
     }
 
     .title{
@@ -84,7 +94,7 @@
 
     <section class = "resultado">
       <p>
-        El resultado es: <span id = "resultado">1</span>
+        El resultado es: <span id = "resultado"></span>
       </p>
     </section>
   </div>
@@ -113,6 +123,8 @@
     diviBtn.addEventListener('click', () => {dividir(number1, number2)});
 
     limpBtn.addEventListener('click', () => {
+      number1 = undefined;
+      number2 = undefined;
       input1.value = "";
       input2.value = "";
       result.textContent = "";
