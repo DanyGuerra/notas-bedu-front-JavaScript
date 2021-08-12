@@ -13,6 +13,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       height: 600px;
     }
     button{
@@ -24,8 +25,6 @@
       background-color:white;
       font-size: 30px;
       font-family:Verdana, Geneva, Tahoma, sans-serif;
-
-
     }
 
     button:hover{
@@ -64,8 +63,11 @@
       font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
 
-
-
+    .input{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   </style>
 
   <div class="wrapper">
@@ -74,11 +76,9 @@
     Calculadora
     </h1>
 
-    <section id="calculadora">
-
+    <section class="input">
       <input class="number1" type="number" placeholder="Numero 1" required>
       <input class="number2" type="number" placeholder="Numero 2" required>
-
     </section>
 
     <section>
@@ -103,7 +103,6 @@
   <script>
     let number1;
     let number2;
-
     const input1 = document.querySelector('.number1');
     const input2 = document.querySelector('.number2');
     let result = document.querySelector('#resultado');
@@ -129,7 +128,6 @@
       input2.value = "";
       result.textContent = "";
     });
-
 
     const sumar = (n1, n2) => {result.textContent = n1 + n2;}
     const restar = (n1, n2) => {result.textContent = n1 - n2;}
