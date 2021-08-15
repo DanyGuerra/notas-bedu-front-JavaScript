@@ -19,4 +19,7 @@ const triggerActions = (count) => {
       strings.forEach((string) => console.log(string)));
 }
 
-triggerActions(23);
+triggerActions(5);
+
+
+
